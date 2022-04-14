@@ -27,7 +27,9 @@ services:
       - general-network
 
   php:
-    image: php:8-fpm
+    build:
+      context: ./
+      dockerfile: docker/php/Dockerfile
     depends_on:
       - mysql
     volumes:

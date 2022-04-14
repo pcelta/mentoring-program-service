@@ -4,10 +4,11 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
-    db.name: ''
-    db.host: ''
-    db.user: ''
-    db.password: ''
+    db.host: '%env(APP_DB_HOST)%'
+    db.port: '%env(APP_DB_PORT)%'
+    db.name: '%env(APP_DB_NAME)%'
+    db.username: '%env(APP_DB_USERNAME)%'
+    db.password: '%env(APP_DB_PASSWORD)%'
 
 services:
     # default configuration for services in *this* file
